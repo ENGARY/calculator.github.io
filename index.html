@@ -19,7 +19,7 @@
         <div class="row">
             <button class="button">%</button>
             <button class="button">/</button>
-            <button class="button">//</button>
+            <button class="button">00</button>
             <button class="button">CC</button>
         </div>
         <div class="row">
@@ -70,6 +70,10 @@
             }
             else if (e.target.innerHTML=="%"){
                 string= (string/100)
+                document.querySelector('input').value = string
+            }
+            else if (e.target.innerHTML=="00"){
+                string+="00"
                 document.querySelector('input').value = string
             }
             
